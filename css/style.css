@@ -60,7 +60,7 @@ a:active{
 ---Section 1 | By Lyes: 31/01/2026
 ====================================*/
 .section-one{
-    background-image: url(/images/bgHome.png);
+    background-image: url(images/bgHome.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
