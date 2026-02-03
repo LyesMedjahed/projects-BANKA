@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer{
+    padding: 1rem 2rem;
+    font-family: lato;
+    letter-spacing: 0.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+   font-size: 36px;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.navBar{
+    position: relative;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+a li{
+    display: inline-block;
+    font-size: 18px;
+}
+a:hover{
+    background-color: #F59E0B;
+    padding: 5px 15px;
+    border-radius: 1rem;
+}
+a:active{
+    background-color: #EA580C;
+}
+.logo, 
+.help, 
+.connexion{
+    color: #374151;
+}
+.openAccount{
+    color: white;
+    background-color:#D97706;
+    padding: 6px 15px;
+    border-radius: 1rem;
+}
+/*==================================
+---Section 1 | By Lyes: 31/01/2026
+====================================*/
+.section-one{
+    background-image: url(/images/bgHome.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.title{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    
+    font-size: 8vw;
+    font-weight: 700;
+    line-height: 0.75;
+
+    color: #374151;
+    opacity: 0.6;
+
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+.tiltcard{
+    height: 350px;
+    position: absolute;
+    left: 53%;
+   /* transform: translateX(-50%);  */
+    z-index: 1;
+    cursor: pointer;
+    will-change: transform;
+}
+.details{
+    position: relative;
+    text-align: center;
+    top: 80%;
+    color: #6B7280;
+}
+
+.section-two,
+.section-three,
+.section-four,
+.section-five,
+.section-six {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 50px;
+    margin: 0 50px;
+    border-radius: 2rem;
+}
+.section-three,
+.section-five{
+    background-color: #f9f9f9;
+}
+.cardDetails{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+}
+
+.imgDetails{
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    
+}
+
+.cardTitle{
+    text-transform: uppercase;
+    font-size: xxx-large;
+    line-height: 5rem;
+}
+.paragraph{
+    font-size: x-large;
+    line-height: 3rem;
+}
+
+/*===================================
+-- Pricing compare cards section--
+  ---By Lyes : 01/02/2026---
+====================================*/
+.section-seven{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #374151;
+    padding: 100px 0;
+    text-align: center;
+}
+.banka1,
+.banka22,
+.banka3{
+    height: 350px;
+    cursor: pointer;
+    transform: translateY(20%);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.banka1,
+.banka3{
+    transform: translateY(20%);
+    position: relative;
+}
+.banka22{
+    visibility: hidden;
+}
+.cards{
+    background-color: whitesmoke;
+    margin: 0 20px;
+    border-radius: 2rem;
+    height: 85vh;
+}
+.cardsmini{
+    position: relative;
+    transform: translateY(-25%);
+    color: #374151;
+}
+.nameCardTitle{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.price{
+    padding: 1rem 0;
+}
+h4{
+    font-size: large;
+    text-transform: capitalize;
+}
+.features{
+    padding: 1rem 0 0.5rem 0;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cardBenef{
+    left: 18%;
+    text-align: left;
+}
+.btn{
+    color: white;
+    background-color:#D97706;
+    padding: 6px 15px;
+    border-radius: 1rem;
+    margin: 2rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #F59E0B;
+    padding: 5px 15px;
+    border-radius: 1rem;
+}
+
+.nameCardTitle, 
+h4,
+.paragraph2,
+.cardBenef,
+.btn{
+    line-height: 2rem;
+    position: relative;
+   
+}
+/*====================================
+        ----RESPONSIVE------
+======================================*/
+@media (max-width: 768px) {
+
+    .section-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .tiltcard{
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        z-index: 10;
+        pointer-events: none;
+    }
+    .details{
+        position: relative;
+        top: -7vh;
+    }
+
+  .section-two,
+  .section-three,
+  .section-four,
+  .section-five,
+  .section-six {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 2rem;
+  }
+
+  .cardDetails{
+    padding: 1rem 0;
+    height: 70vh;
+  }
+
+  .imgDetails {
+    width: 70%;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .cardTitle{
+    text-transform: uppercase;
+    font-size: large;
+    line-height: 2rem;
+}
+
+  .cards{
+     margin-bottom: 8rem;
+  }
+
+
+}
