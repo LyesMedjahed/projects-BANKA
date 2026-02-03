@@ -70,14 +70,14 @@ mm.add("(max-width: 1023px)", () => {
     scrollTrigger: {
       trigger: ".section-one",
       start: "top top",
-      end: "+=4700",           
+      end: "+=4600",           
       scrub: 1.2,
       invalidateOnRefresh: true,
     },
   });
 
   tl.to(card, {
-    y: 4700,
+    y: 4600,
     ease: "none",  // 🔑 IMPORTANT : pas d’accélération
   });
 });
