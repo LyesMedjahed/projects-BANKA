@@ -25,7 +25,7 @@ Features smooth scroll-based animations powered by GSAP and interactive card ele
 
 ## 📂 Installation & Setup
 ```bash
-git clone https://github.com/LyesMedjahed/projects-SARA
-cd projects-SARA
+git clone https://github.com/LyesMedjahed/projects-BANKA
+cd projects-BANKA
 npm install
 npm run dev
