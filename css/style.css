@@ -3,9 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-/*=================
+/*===========================
 ---Header---
-=================*/
+============================*/
 .headerContainer{
     padding: 1rem 2rem;
     font-family: lato;
@@ -269,7 +269,6 @@ h4,
 .btn{
     line-height: 2rem;
     position: relative;
-   
 }
 
 /* Burger button */
@@ -289,6 +288,100 @@ h4,
   transition: all 0.3s ease;
 }
 
+/*=====================================
+---Section FAQ | By Lyes: 04/02/2026---
+=======================================*/
+    .faq-container {
+      margin: 0 auto;
+      padding: 2rem 0;
+      background-color: #f9f9f9;
+    }
+
+    .faq-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin: 0 200px 10px 200px;
+    }
+
+    .faq-question {
+      background: #fff;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 18px 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #222;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #fafafa;
+      transition: all 0.4s ease;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 15px 20px;
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+.help-btn {
+  display: inline-block;
+  background-color: #0070f3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.help-btn:hover {
+  background-color: #005bb5;
+}
+
+.faq-footer {
+  font-weight: bold;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.faqTxt{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 /*====================================
         ----RESPONSIVE------
 ======================================*/
@@ -402,4 +495,7 @@ h4,
      margin-bottom: 8rem;
   }
 
+    .faq-item {
+      margin: 0 50px 10px 50px;
+    }
 }
