@@ -82,3 +82,34 @@ mm.add("(max-width: 1023px)", () => {
   });
 });
 
+/*==========================
+----header on scroll----
+============================ */
+
+const headerMenu = document.getElementById('headerMenu');
+
+window.addEventListener('scroll', () => {
+  headerMenu.classList.toggle('scrolled', window.scrollY > 5);
+});
+
+/*================
+---burger menu---
+================= */
+/*
+const burgerMenu = document.getElementById('line2');
+
+burgerMenu.addEventListener('click', ()=> {
+  burgerMenu.style.display = 'none';
+})
+*/
+
+const burger = document.getElementById('burger');
+const navBar = document.querySelector('.navBar ul');
+
+burger.addEventListener('click', () => {
+  navBar.classList.toggle('active');  // ouvre/ferme le menu
+  burger.classList.toggle('active');  // optionnel : anime le burger
+});
+
+
+

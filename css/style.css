@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+/*=================
+---Header---
+=================*/
 .headerContainer{
     padding: 1rem 2rem;
     font-family: lato;
@@ -16,6 +18,10 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+    color: #374151;
+}
+#headerMenu {
+  transition: background-color 0.3s ease, color 0.3s ease;;
 }
 
 .logo{
@@ -28,34 +34,45 @@
     position: relative;
     font-weight: 400;
 }
-a {
+.navBar a {
     text-decoration: none;
     margin-left: 1rem;
 }
-
-a li{
-    display: inline-block;
-    font-size: 18px;
+.navBar ul{
+    display: flex;
 }
-a:hover{
+.navBar li a{
+    font-size: 18px;
+    color: #374151;
+}
+.navBar a:hover{
     background-color: #F59E0B;
     padding: 5px 15px;
     border-radius: 1rem;
 }
-a:active{
+.navBar a:active{
     background-color: #EA580C;
 }
-.logo, 
-.help, 
-.connexion{
-    color: #374151;
-}
+
 .openAccount{
     color: white;
     background-color:#D97706;
     padding: 6px 15px;
     border-radius: 1rem;
 }
+
+#headerMenu.scrolled {
+  background-color: rgba(0,0,0,0.3);
+}
+
+#headerMenu.scrolled .logo {
+  color: #fff;
+}
+
+#headerMenu.scrolled li a {
+  color: #fff;
+}
+
 /*==================================
 ---Section 1 | By Lyes: 31/01/2026
 ====================================*/
@@ -234,11 +251,120 @@ h4,
     position: relative;
    
 }
+
+/* Burger button */
+.lines {
+  display: none; /* visible sur mobile seulement */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.lines div {
+  height: 3px;
+  background-color: #374151;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
 /*====================================
         ----RESPONSIVE------
 ======================================*/
 @media (max-width: 768px) {
 
+   .lines {
+    display: flex;
+  }
+
+  .navBar {
+  position: relative;
+}
+
+  .navBar ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: 85vh;
+    width: 250px;
+    padding: 0;
+    transform: translateX(15%);
+    border-radius: 0 0 0.5rem 0.5rem;
+    overflow-y: auto;
+  }
+
+  .navBar ul.active {
+    display: flex;
+  }
+
+  .navBar li {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    top: 100px;
+  }
+  .navBar li a{
+    color: white;
+  }
+
+  .lines.active .line-one {
+  transform: rotate(45deg) translate(5px, 6px);
+  background-color: white;
+}
+
+.lines.active .line-two {
+  opacity: 0;
+}
+
+.lines.active .line-three {
+  transform: rotate(-45deg) translate(5px, -8px);
+  background-color: white;
+}
+
+#headerMenu.scrolled .lines div {
+  background-color: #fff;
+}
+
+
+/*
+    .navBar ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        top: -26px;
+        transform: translateX(-65%);
+        height: 100vh;
+        width: 40vw;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .navBar li a{
+        color: #fff;
+        position: relative;
+        top: 30vh;
+        text-align: center;
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .line-one,
+    .line-two,
+    .line-three{
+        position: relative;
+        background-color: #374151;
+        width: 30px;
+        height: 0.5px;
+        padding: 2px 0;
+        margin: 5px 0;
+        cursor: pointer;
+    }
+*/
     .section-one{
         display: flex;
         flex-direction: column;
