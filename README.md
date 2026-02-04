@@ -6,7 +6,7 @@ _A modern and responsive Online banking as a landing page built with JavaScript 
 🔗 [https://LyesMedjahed/projects-BANKA.com](https://lyesmedjahed.github.io/projects-BANKA/)
 
 ## 📸 Preview
-![Project Preview](./images/BANKA.gif)
+![Project Preview](./images/banka.gif)
 
 ## 🛠️ Tech Stack
 ![JavaScript](https://img.shields.io/badge/JS-yellow?style=flat-square&logo=javascript&logoColor=black)
