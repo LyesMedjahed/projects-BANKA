@@ -395,9 +395,22 @@ footer{
     background-color: #374151;
 
 }
-
+.footerLeft{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
 .footerTitle{
     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.newsTitle{
+    text-transform: uppercase;
+}
+
+.footerCard{
+    padding-left: 2rem;
 }
 .footerCard ul{
     text-align: center;
@@ -447,7 +460,14 @@ input{
     width: 30px;
     margin: 20px 10px;
 }
-
+.icon{
+    cursor: pointer;
+}
+.icon:hover{
+    height: 40px;
+    width: 40px;
+    transition: 1s ease;
+}
 /*====================================
         ----RESPONSIVE------
 ======================================*/
