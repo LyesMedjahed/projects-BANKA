@@ -100,7 +100,18 @@
     white-space: nowrap;
     pointer-events: none;
     z-index: 0;
+
+    animation: title 1.5s ease-out;
 }
+@keyframes title{
+    0%{
+        top: 35%;
+    }
+    100%{
+        top: 25%;
+    }
+}
+
 .tiltcard{
     height: 350px;
     position: absolute;
@@ -115,6 +126,15 @@
     text-align: center;
     top: 80%;
     color: #6B7280;
+    animation: details 1.5s ease-out;
+}
+@keyframes details{
+    0%{
+        top: 70%;
+    }
+    100%{
+        top: 80%;
+    }
 }
 
 .section-two,
@@ -329,42 +349,6 @@ h4,
   background-color: #fff;
 }
 
-
-/*
-    .navBar ul {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        top: -26px;
-        transform: translateX(-65%);
-        height: 100vh;
-        width: 40vw;
-        margin: 0;
-        padding: 0;
-        background-color: rgba(0,0,0,0.3);
-    }
-    .navBar li a{
-        color: #fff;
-        position: relative;
-        top: 30vh;
-        text-align: center;
-        width: 100%;
-        padding-left: 15px;
-    }
-
-    .line-one,
-    .line-two,
-    .line-three{
-        position: relative;
-        background-color: #374151;
-        width: 30px;
-        height: 0.5px;
-        padding: 2px 0;
-        margin: 5px 0;
-        cursor: pointer;
-    }
-*/
     .section-one{
         display: flex;
         flex-direction: column;
@@ -417,6 +401,5 @@ h4,
   .cards{
      margin-bottom: 8rem;
   }
-
 
 }

@@ -113,3 +113,27 @@ burger.addEventListener('click', () => {
 
 
 
+/*================================
+-- Titles & paragraphs animations 
+By Lyes: 04/02/2026
+=================================*/
+
+ gsap.registerPlugin(ScrollTrigger);
+
+    const elements = gsap.utils.toArray(".cardTitle, .paragraphe");
+
+    elements.forEach(el => {
+      gsap.fromTo(el,
+        { y: "40%" },   // départ : invisible et sous sa position finale
+        { 
+          y: "0%",                  // fin : position normale
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",       // animation commence quand le haut de l'élément atteint 80% de la fenêtre
+            end: "top 50%",         // animation finit au centre
+            scrub: true             // animation suit le scroll
+          }
+        }
+      );
+    });
