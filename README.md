@@ -16,15 +16,17 @@ _A modern and responsive Online banking as a landing page built with JavaScript 
 ![CSS3](https://img.shields.io/badge/CSS3-blue?style=flat-square&logo=css3&logoColor=white)
 
 ## ✨ Features
-- Responsive design for all screen sizes
-- Smooth scroll-based animations using GSAP ScrollTrigger
-- Dynamic header and footer loading with modern JavaScript ES6 (async/await)
-- Interactive shopping cart with product count
-- Checkout modal (Buy Now popup)
-- Product collection display dynamically
-- Product color selection
-- Modern UI/UX
-- Clean and maintainable code
+ - Interactive Landing Page – A dynamic homepage showcasing the bank card and its benefits.
+
+ - Smooth Card Animation – The card follows the scroll, moving in a zigzag pattern to highlight key features, creating an engaging user experience.
+
+ - Progressive Feature Discovery – Users uncover the advantages of the card gradually as they scroll down the page.
+
+ - Multiple Card Options – Three card types are presented: Standard, Silver, and Gold, with the Silver card accompanying the user through the entire scroll.
+
+ - GSAP Animations – Smooth and responsive animations powered by GSAP, delivering a modern, professional feel.
+
+ - Responsive Design – Optimized for all screen sizes, from mobile to tablet and desktop.
 
 ## 📂 Installation & Setup
 ```bash
