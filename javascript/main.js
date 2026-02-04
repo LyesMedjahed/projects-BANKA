@@ -118,22 +118,23 @@ burger.addEventListener('click', () => {
 By Lyes: 04/02/2026
 =================================*/
 
- gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-    const elements = gsap.utils.toArray(".cardTitle, .paragraphe");
+gsap.utils.toArray("section").forEach(section => {
+  const texts = section.querySelectorAll(".cardTitle, .paragraph");
 
-    elements.forEach(el => {
-      gsap.fromTo(el,
-        { y: "40%" },   // départ : invisible et sous sa position finale
-        { 
-          y: "0%",                  // fin : position normale
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",       // animation commence quand le haut de l'élément atteint 80% de la fenêtre
-            end: "top 50%",         // animation finit au centre
-            scrub: true             // animation suit le scroll
-          }
-        }
-      );
-    });
+  if (!texts.length) return;
+
+  gsap.from(texts, {
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 45%",
+      toggleActions: "play reverse play reverse"
+    }
+  });
+});
+
