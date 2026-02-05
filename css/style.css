@@ -509,6 +509,9 @@ input{
 ======================================*/
 @media (max-width: 768px) {
 
+    body{
+        overflow-x: hidden;
+    }
    .lines {
     display: flex;
   }
@@ -640,7 +643,7 @@ input{
     display: none;
   }
   .store-badges{
-    padding: 10px 5px;
+    padding: 10px 0px;
 }
 
 }
