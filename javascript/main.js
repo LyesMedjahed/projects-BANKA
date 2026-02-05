@@ -149,3 +149,10 @@ gsap.utils.toArray("section").forEach(section => {
         faq.classList.toggle("active");
       });
     });
+
+
+/*=================================================
+-- Change Automatically years allrights reserved 
+By Lyes: 05/02/2026
+===================================================*/
+    const years =   document.getElementById("year").textContent = new Date().getFullYear();

@@ -390,12 +390,13 @@ footer{
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
-    padding: 30px 50px;
+    padding: 40px 60px;
     color: #f9f9f9;
     background-color: #374151;
 
 }
 .footerLeft{
+    flex: 2;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -413,7 +414,7 @@ footer{
     padding-left: 2rem;
 }
 .footerCard ul{
-    text-align: center;
+    text-align: left;
 }
 .footerCard li a{
     list-style: none;
@@ -432,12 +433,22 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
 }
+.store-badges{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.iconStore{
+     height: 50px;
+    cursor: pointer;
+}
+
 input{
     height: 30px;
     width: 60%;
     border-radius:  0.5rem 0 0 0.5rem;
     margin-top: 10px;
-    
+    border: 1px solid transparent;
 }
 
 .footerBtn{
@@ -468,6 +479,31 @@ input{
     width: 40px;
     transition: 1s ease;
 }
+
+.allrightsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-basis: 100%;
+    border-top: 1px solid #f9f9f9;
+    padding: 20px;
+}
+.allRights, 
+.signature{
+    color: #f9f9f9;
+    white-space: nowrap;
+}
+.author {
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 500;
+}
+.author:hover {
+  text-decoration: underline;
+}
+
 /*====================================
         ----RESPONSIVE------
 ======================================*/
@@ -584,4 +620,27 @@ input{
     .faq-item {
       margin: 0 50px 10px 50px;
     }
+/*FOOTER*/
+.newsTitle{
+    padding-top: 30px;
+}
+/*all rights + signature footer 05-02-2026*/
+    .allrightsContainer {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .allRights,
+  .signature {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .allrightsContainer span {
+    display: none;
+  }
+  .store-badges{
+    padding: 10px 5px;
+}
+
 }
