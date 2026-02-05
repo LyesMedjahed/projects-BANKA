@@ -1,54 +1,128 @@
 
-/* =======================================
-   GSAP FOR MOBILE - Vertical scrolling
-========================================== */ 
-gsap.registerPlugin(ScrollTrigger);
-
-const mm = gsap.matchMedia();
 
 /* =======================================================
    DESKTOP (référence : 1920 × 1080)
 =========================================================*/
+gsap.registerPlugin(ScrollTrigger);
+
+const mm = gsap.matchMedia();
+
 mm.add("(min-width: 1024px)", () => {
-  const card = document.querySelector(".tiltcard");
+  const card1 = document.querySelector(".card-1");
 
-  const positions = [
-    { x: 0,    y: 0 },
-    { x: -620, y: 550 },
-    { x: 220,  y: 1200 },
-    { x: -370, y: 1650 },
-    { x: -120, y: 2200 },
-    { x: -630, y: 2800 },
-    { x: -220, y: 3350 },
-  ];
+  // position initiale
+  gsap.set(card1, { x: 0, y: 0 });
 
-  const tl = gsap.timeline({
+  // Timeline pour section 1 → 3
+  gsap.timeline({
     scrollTrigger: {
       trigger: ".section-one",
-      start: "center 90%",
-      endTrigger: ".section-seven",
+      start: "center 70%",
+      endTrigger: ".section-three",
       end: "center center",
       scrub: 1.3,
       invalidateOnRefresh: true,
-    },
-  });
-
-  positions.forEach((pos, i) => {
-    if (i === 0) return;
-
-    tl.to(card, {
-      x: pos.x,
-      y: pos.y,
-      ease: "power1.inOut",
-    });
-  });
+    }
+  })
+  .to(card1, { x: "-26vw", y: "68vh", ease: "power1.inOut" })  // section 2
+  .to(card1, { x: "32vw", y: "154vh", ease: "power1.inOut" }); // section 3
 });
+
+
+/*
+  // Carte 2 : sections 4 → 6
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section-four",
+      start: "top center",
+      endTrigger: ".section-six",
+      end: "bottom center",
+      scrub: true,
+    }
+  })
+  .fromTo(".card-2",
+    { x: "0vw", y: "-20vh", opacity: 0 },
+    { x: "5vw", y: "25vh", opacity: 1, ease: "power1.inOut" }
+  )
+  .to(".card-2", { x: "-10vw", y: "40vh", ease: "power1.inOut" });
+
+  // Carte 3 : section 7
+  gsap.fromTo(".card-3",
+    { x: "0vw", y: "-30vh", opacity: 0 },
+    {
+      x: "0vw",
+      y: "0vh",
+      opacity: 1,
+      duration: 1,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: ".section-seven",
+        start: "top center",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+*/
+
+/* ==============================================
+   MOBILE
+============================================== */
+mm.add("(max-width: 1023px)", () => {
+  // Carte 1
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section-one",
+      start: "top center",
+      endTrigger: ".section-three",
+      end: "bottom center",
+      scrub: true,
+    }
+  })
+  .to(".card-1", { x: "5vw", y: "15vh", ease: "power1.inOut" })
+  .to(".card-1", { x: "-10vw", y: "25vh", ease: "power1.inOut" });
+
+  // Carte 2
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section-four",
+      start: "top center",
+      endTrigger: ".section-six",
+      end: "bottom center",
+      scrub: true,
+    }
+  })
+  .fromTo(".card-2",
+    { x: "0vw", y: "-15vh", opacity: 0 },
+    { x: "3vw", y: "20vh", opacity: 1, ease: "power1.inOut" }
+  )
+  .to(".card-2", { x: "-8vw", y: "30vh", ease: "power1.inOut" });
+
+  // Carte 3
+  gsap.fromTo(".card-3",
+    { x: "0vw", y: "-20vh", opacity: 0 },
+    {
+      x: "0vw",
+      y: "0vh",
+      opacity: 1,
+      duration: 1,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: ".section-seven",
+        start: "top center",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+});
+
+
+
 
 
 /* =======================================
    GSAP FOR MOBILE - Vertical scrolling
 ========================================== */ 
-mm.add("(max-width: 1023px)", () => {
+ /*mm.add("(max-width: 1023px)", () => {
   const card = document.querySelector(".tiltcard");
 
   // reset propre
@@ -72,6 +146,8 @@ mm.add("(max-width: 1023px)", () => {
     ease: "none",  // 🔑 IMPORTANT : pas d’accélération
   });
 });
+*/
+
 
 /*==========================
 ----header on scroll----
