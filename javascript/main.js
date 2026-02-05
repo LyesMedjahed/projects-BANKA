@@ -1,33 +1,25 @@
 
-/*================================================
----GSAP smooth Animation -- By Lyes: 02/02/2026--- 
-================================================== */
-
+/* =======================================
+   GSAP FOR MOBILE - Vertical scrolling
+========================================== */ 
 gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
 
 /* =======================================================
-   DESKTOP (laptop)
+   DESKTOP (référence : 1920 × 1080)
 =========================================================*/
-mm.add("(min-width: 1024px)", () => {
-  gsap.registerPlugin(ScrollTrigger);
-
-const mm = gsap.matchMedia();
-
 mm.add("(min-width: 1024px)", () => {
   const card = document.querySelector(".tiltcard");
 
-  // 🔧 POINTS DE POSITION PAR SECTION
-  // y = distance depuis la section-one
   const positions = [
-    { x: 0,    y: 0 },     // section 1 (centre)
-    { x: -620, y: 550 },   // section 2 (gauche + bas)
-    { x: 220,  y: 1200 },   // section 3 (droite + bas)
-    { x: -370, y: 1650 },  // section 4
-    { x: -120,  y: 2200 },  // section 5
-    { x: -630, y: 2800 },  // section 6
-    { x: -220,    y: 3350 },  // section 7 (centre final)
+    { x: 0,    y: 0 },
+    { x: -620, y: 550 },
+    { x: 220,  y: 1200 },
+    { x: -370, y: 1650 },
+    { x: -120, y: 2200 },
+    { x: -630, y: 2800 },
+    { x: -220, y: 3350 },
   ];
 
   const tl = gsap.timeline({
@@ -50,7 +42,6 @@ mm.add("(min-width: 1024px)", () => {
       ease: "power1.inOut",
     });
   });
-});
 });
 
 
