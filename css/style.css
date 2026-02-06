@@ -112,16 +112,32 @@
     }
 }
 
-.tiltcard{
+.card1{
     height: 350px;
     position: absolute;
-    left: 50%;
+    left: 52%;
     top: 60%;
     z-index: 1;
-     transform: translate(-50%, -50%);
-  pointer-events: none;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   /*  will-change: transform;*/
 }
+
+.card2{
+    height: 350px;
+    position: absolute;
+    left: 52%;
+    top: 18%;
+    z-index: 1;
+    pointer-events: none;
+
+}
+.card3{
+    height: 350px;
+    position: absolute;
+    left: 5%;
+}
+
 .details{
     position: relative;
     text-align: center;
