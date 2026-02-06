@@ -55,7 +55,7 @@ mm.add("(min-width: 1024px)", () => {
 
   // --- CARD 2 ---
   const card2 = document.querySelector(".card2");
-  gsap.set(card2, { x: "-22vw", y: "236vh" });
+  gsap.set(card2, { x: "-22vw", y: "240vh" });
 
   gsap.timeline({
     scrollTrigger: {
@@ -68,7 +68,7 @@ mm.add("(min-width: 1024px)", () => {
     }
   })
   .to(card2, { x: "3vw", y: "320vh", ease: "power1.inOut" })
-  .to(card2, { x: "-40vw", y: "400vh", ease: "power1.inOut" });
+  .to(card2, { x: "-40vw", y: "410vh", ease: "power1.inOut" });
 
 
 
