@@ -1,7 +1,11 @@
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
 }
 /*===========================
 ---Header---
@@ -211,7 +215,6 @@
     background-color: #374151;
     padding: 100px 0;
     text-align: center;
-    overflow-x: hidden;
 }
 .banka1,
 .banka22,
@@ -535,9 +538,10 @@ input{
 ======================================*/
 @media (max-width: 768px) {
 
-    body{
-        overflow-x: hidden;
+    .headerContainer{
+        display: flex;
     }
+
    .lines {
     display: flex;
   }
@@ -556,9 +560,8 @@ input{
     height: 85vh;
     width: 250px;
     padding: 0;
-    transform: translateX(15%);
+    /*transform: translateX(15%);*/
     border-radius: 0 0 0.5rem 0.5rem;
-    overflow-y: auto;
   }
 
   .navBar ul.active {
@@ -568,8 +571,8 @@ input{
   .navBar li {
     position: relative;
     text-align: center;
-    padding: 20px 0;
-    top: 100px;
+    padding: 1rem 0;
+    top: 8rem;
   }
   .navBar li a{
     color: white;
