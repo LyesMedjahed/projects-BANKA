@@ -146,7 +146,7 @@ gsap.from(".banka22", {
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".section-seven",
-    start: "top 70%",
+    start: "top 30%",
     toggleActions: "play none none reverse"
   }
 
