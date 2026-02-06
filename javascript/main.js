@@ -76,8 +76,6 @@ mm.add("(min-width: 1024px)", () => {
 });
 
 
-
-
 /* =======================================
    GSAP FOR MOBILE - Vertical scrolling
 ========================================== */ 
@@ -105,6 +103,54 @@ mm.add("(min-width: 1024px)", () => {
     ease: "none",  // 🔑 IMPORTANT : pas d’accélération
   });
 });
+
+
+/*======================================
+---Banka3 and banka1 gsap animation----
+====================================== */
+
+/*STANDARD card */
+gsap.from(".banka1", {
+  x: -300,
+  opacity: 0,
+  duration: 2,
+  rotation: -180,
+  scrollTrigger: {
+    trigger: ".banka1",
+    start: "top 50%",
+    end: "top 20%",
+    scrub: true
+  }
+})
+
+/*Golden card */
+gsap.from(".banka3", {
+  x: 300,
+  opacity: 0,
+  duration: 2,
+  rotation: 180,
+  scrollTrigger: {
+    trigger: ".banka3",
+    start: "top 50%",
+    end: "top 20%",
+    scrub: true
+  }
+})
+
+/*Silver card */
+gsap.from(".banka22", {
+  x: -300,
+  y: -500,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".section-seven",
+    start: "top 70%",
+    toggleActions: "play none none reverse"
+  }
+
+})
 
 
 /*==========================

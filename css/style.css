@@ -211,6 +211,7 @@
     background-color: #374151;
     padding: 100px 0;
     text-align: center;
+    overflow-x: hidden;
 }
 .banka1,
 .banka22,
@@ -227,7 +228,7 @@
     position: relative;
 }
 .banka22{
-    visibility: hidden;
+    opacity: hidden;
 }
 .cards{
     background-color: whitesmoke;
