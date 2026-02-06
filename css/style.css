@@ -622,11 +622,12 @@ input{
     justify-content: center;
     text-align: center;
     height: 100vh;
-    padding: 2rem;
+    padding: 2rem 0.2rem;
   }
 
   .cardDetails{
-    padding: 1rem 0;
+    padding: 1rem 0 ;
+    margin: auto;
     height: 70vh;
   }
 
@@ -671,7 +672,6 @@ input{
   .store-badges{
     padding: 10px 0px;
 }
-
 
 .card2,
 .card3{
