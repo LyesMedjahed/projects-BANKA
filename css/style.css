@@ -101,7 +101,7 @@
     pointer-events: none;
     z-index: 0;
 
-    animation: title 1.5s ease-out;
+   animation: title 1.5s ease-out;
 }
 @keyframes title{
     0%{
@@ -670,6 +670,12 @@ input{
   }
   .store-badges{
     padding: 10px 0px;
+}
+
+
+.card2,
+.card3{
+    visibility: hidden;
 }
 
 }

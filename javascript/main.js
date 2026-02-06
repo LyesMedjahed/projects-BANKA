@@ -1,34 +1,22 @@
 
+/*======================================
+---Section-one title gsap animation----
+------By Lyes - 06-02-2026-----
+====================================== */
+
+/*
+gsap.from("#title .char", {
+  scale: 0.8,
+  opacity: 0,
+  stagger: 0.05,
+  ease: "back.out(1.7)",
+  duration: 1
+})
+*/
 
 /* =======================================================
    DESKTOP (référence : 1920 × 1080)
 =========================================================*/
-/*
-gsap.registerPlugin(ScrollTrigger);
-
-const mm = gsap.matchMedia();
-
-mm.add("(min-width: 1024px)", () => {
-  const card1 = document.querySelector(".card1");
-
-  // position initiale
-  gsap.set(card1, { x: 0, y: 0 });
-
-  // Timeline pour section 1 → 3
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".section-one",
-      start: "center 70%",
-      endTrigger: ".section-three",
-      end: "center center",
-      scrub: 1.3,
-      invalidateOnRefresh: true,
-    }
-  })
-  .to(card1, { x: "-26vw", y: "68vh", ease: "power1.inOut" })  // section 2
-  .to(card1, { x: "32vw", y: "154vh", ease: "power1.inOut" }); // section 3
-});
-*/
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,16 +58,13 @@ mm.add("(min-width: 1024px)", () => {
   .to(card2, { x: "3vw", y: "320vh", ease: "power1.inOut" })
   .to(card2, { x: "-40vw", y: "410vh", ease: "power1.inOut" });
 
-
-
-
 });
-
 
 /* =======================================
    GSAP FOR MOBILE - Vertical scrolling
 ========================================== */ 
- mm.add("(max-width: 1023px)", () => {
+/* 
+mm.add("(max-width: 1023px)", () => {
   const card = document.querySelector(".card1");
 
   // reset propre
@@ -103,12 +88,12 @@ mm.add("(min-width: 1024px)", () => {
     ease: "none",  // 🔑 IMPORTANT : pas d’accélération
   });
 });
-
+*/
 
 /*======================================
----Banka3 and banka1 gsap animation----
+---Section-seven gsap animation----
+------By Lyes - 06-02-2026-----
 ====================================== */
-
 /*STANDARD card */
 gsap.from(".banka1", {
   x: -300,
@@ -151,6 +136,8 @@ gsap.from(".banka22", {
   }
 
 })
+
+
 
 
 /*==========================
