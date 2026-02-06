@@ -55,7 +55,7 @@ mm.add("(min-width: 1024px)", () => {
 
   // --- CARD 2 ---
   const card2 = document.querySelector(".card2");
-  gsap.set(card2, { x: -370, y: 1650 });
+  gsap.set(card2, { x: "-22vw", y: "236vh" });
 
   gsap.timeline({
     scrollTrigger: {
