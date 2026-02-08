@@ -63,7 +63,7 @@ mm.add("(min-width: 1024px)", () => {
 /* =======================================
    GSAP FOR MOBILE - Vertical scrolling
 ========================================== */ 
-/* 
+/*
 mm.add("(max-width: 1023px)", () => {
   const card = document.querySelector(".card1");
 
@@ -95,6 +95,7 @@ mm.add("(max-width: 1023px)", () => {
 ------By Lyes - 06-02-2026-----
 ====================================== */
 /*STANDARD card */
+
 gsap.from(".banka1", {
   x: -300,
   opacity: 0,
@@ -109,6 +110,7 @@ gsap.from(".banka1", {
 })
 
 /*Golden card */
+
 gsap.from(".banka3", {
   x: 300,
   opacity: 0,
@@ -117,7 +119,7 @@ gsap.from(".banka3", {
   scrollTrigger: {
     trigger: ".banka3",
     start: "top 50%",
-    end: "top 20%",
+    end: "top 20%", 
     scrub: true
   }
 })
@@ -138,8 +140,6 @@ gsap.from(".banka22", {
 })
 
 
-
-
 /*==========================
 ----header on scroll----
 ============================ */
@@ -151,9 +151,9 @@ window.addEventListener('scroll', () => {
 });
 
 
-/*==========================
+/*===========================
 ----burger menu---
-============================ */
+============================*/
 
 const burger = document.getElementById('burger');
 const navBar = document.querySelector('.navBar ul');

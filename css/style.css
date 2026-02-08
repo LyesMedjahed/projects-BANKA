@@ -4,8 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
+body, html {
+  overflow-x: hidden;
+  width: 100%;
 }
 /*===========================
 ---Header---
@@ -538,34 +539,44 @@ input{
 ======================================*/
 @media (max-width: 768px) {
 
-    .headerContainer{
-        display: flex;
-    }
+    .headerContainer {
+    padding: 0.75rem 1.5rem;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+     .logo {
+    font-size: 28px;      
+  }
 
    .lines {
     display: flex;
   }
 
-  .navBar {
-  position: relative;
-}
+ .navBar {
+    margin-left: auto;
+     width: auto;
+  }
 
   .navBar ul {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     right: 0;
-    height: 85vh;
     width: 250px;
-    padding: 0;
-    /*transform: translateX(15%);*/
-    border-radius: 0 0 0.5rem 0.5rem;
+    height: 100vh;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+
+    background-color: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+
+    will-change: transform;
   }
 
   .navBar ul.active {
-    display: flex;
+    transform: translateX(0);
   }
 
   .navBar li {
@@ -577,6 +588,10 @@ input{
   .navBar li a{
     color: white;
   }
+
+  .lines {
+  z-index: 1100;
+}
 
   .lines.active .line-one {
   transform: rotate(45deg) translate(5px, 6px);
@@ -625,15 +640,30 @@ input{
     justify-content: center;
     text-align: center;
     height: 100vh;
-    padding: 2rem 0.2rem;
+    padding: 2rem 0rem;
   }
 
   .cardDetails{
     padding: 1rem 0 ;
     margin: auto;
-    height: 70vh;
+    height: 70v;
   }
 
+  .paragraph{
+    padding-bottom: 0.9rem 0;
+    line-height: 2rem;
+  }
+  .section-five{
+    position: relative;
+    top: 2.5rem;
+  }
+  /*
+  .parag{
+    position: relative;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
+  */
   .imgDetails {
     width: 70%;
     margin: 1rem 0;
@@ -648,6 +678,8 @@ input{
 
   .cards{
      margin-bottom: 8rem;
+
+     height: auto;
   }
 
     .faq-item {
@@ -676,9 +708,14 @@ input{
     padding: 10px 0px;
 }
 
-.card2,
+
 .card3{
     visibility: hidden;
 }
 
+.card2{
+    position: relative;
+    right: 200px;
+    visibility: hidden;
+}
 }
