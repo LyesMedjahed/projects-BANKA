@@ -209,10 +209,10 @@ body, html {
 ====================================*/
 .section-seven{
     display: flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 4rem;
     background-color: #374151;
     padding: 100px 0;
     text-align: center;
@@ -670,16 +670,17 @@ input{
     width: 100%;
   }
 
+  .section-seven{
+    display: flex;
+  }
   .cardTitle{
     text-transform: uppercase;
     font-size: large;
     line-height: 2rem;
 }
 
-  .cards{
-     margin-bottom: 8rem;
-
-     height: auto;
+  .cards, .cardsmini{
+    height: auto;
   }
 
     .faq-item {
@@ -718,4 +719,49 @@ input{
     right: 200px;
     visibility: hidden;
 }
+}
+
+
+/*==============================================
+RESPONSIVE FOR TABLETS
+===============================================*/
+@media (min-width: 769px) and (max-width: 1023px) {
+    .card2{
+        visibility: hidden;
+    }
+
+    .cardDetails{
+        padding: 0.5rem;
+    }
+    .imgDetails{
+        flex: 1;
+        height: auto;
+        width: 100%;
+        max-width: 25rem;
+    }
+    .cardTitle{
+        flex: 1;
+        font-size: x-large;
+        font-weight: 600;
+        line-height: 4rem;
+    }
+    .paragraph{
+        font-size: x-large;
+        font-weight: 500;
+    }
+
+    .section-seven{
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+    }
+    .cards{
+       margin: 2rem;
+       
+    }
+
+    
+        
 }
