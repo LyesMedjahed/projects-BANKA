@@ -731,7 +731,7 @@ RESPONSIVE FOR TABLETS
     }
 
     .cardDetails{
-        padding: 0.5rem;
+        padding: 1.5rem;
     }
     .imgDetails{
         flex: 1;
@@ -743,11 +743,13 @@ RESPONSIVE FOR TABLETS
         flex: 1;
         font-size: x-large;
         font-weight: 600;
-        line-height: 4rem;
+        line-height: 2.5rem;
+        padding: 0.5rem;
     }
     .paragraph{
         font-size: x-large;
         font-weight: 500;
+        line-height: 2rem;
     }
 
     .section-seven{
